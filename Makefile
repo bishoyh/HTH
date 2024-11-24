@@ -18,14 +18,14 @@ OBJECTS = $(SOURCES:.cc=.o)
 
 # Build the target executable
 $(TARGET): $(OBJECTS)
-    $(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJECTS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJECTS)
 
 # Clean up generated files
 clean:
-    rm -f $(TARGET) $(OBJECTS)
+	rm -f $(TARGET) $(OBJECTS)
 
 # Compile source files into object files
 %.o: %.cc
-    $(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 .PHONY: clean
